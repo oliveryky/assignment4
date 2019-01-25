@@ -1,4 +1,4 @@
 os: osx
 language: cpp
 compiler: clang++
-script: ./bash.sh
+script: chmod +x ./bash.sh
