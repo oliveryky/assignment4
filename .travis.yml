@@ -1,6 +1,3 @@
 language: cpp
 compiler: clang++
-script:
-  clang++ -c main.cpp
-  clang++ -o main main.o
-  ./main && make && make test
+script: ./main && make && make main
