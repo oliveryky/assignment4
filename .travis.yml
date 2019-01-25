@@ -1,4 +1,4 @@
 os: osx
 language: cpp
 compiler: clang++
-script: ./main shapeInput.txt
+script: ./bash.sh

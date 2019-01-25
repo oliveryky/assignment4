@@ -147,7 +147,7 @@ void readFile(const std::string &fileName) {
         while(getline(file, currLine)) {
             //split string
             std::vector<int> values = split(currLine);
-            std::cout << "Shape #" << counter++ << " is: " << parseShape(values) << std::endl;
+            std::cout << parseShape(values) << std::endl;
         }
     }
 }
