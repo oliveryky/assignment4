@@ -103,7 +103,7 @@ bool isRectangle(const std::vector<int>& values) {
 }
 
 /**
- * takes a vector of xy-coordinates and returns the most specific shape
+ * takes a vector of x,y-coordinates and returns the most specific shape
  * @param values
  * @return the string name for the shape
  */
