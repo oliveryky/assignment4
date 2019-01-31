@@ -176,7 +176,7 @@ bool checkDupPoints(const std::vector<int> &values) {
     for (int i = 0; i < 6; i += 2) {
         int x = values[i];
         int y = values[i + 1];
-        if(x == 0 && y == 0) {
+        if (x == 0 && y == 0) {
             return false;
         }
 
@@ -190,28 +190,22 @@ bool checkDupPoints(const std::vector<int> &values) {
     return true;
 }
 
-bool hasIntersection(const std::vector<int> &values) {
-    double ax = values[0]; // direction of line a
-    double ay = values[1]; // ax and ay as above
-    double bx = values[2] - values[4]; // direction of line b, reversed
-    double by = values[3] - values[5]; // really -by and -by as above
-    double dx = values[2]; // right-hand side
-    double dy = values[3];
-    double det = ax * by - ay * bx;
-    if (det == 0) return false;
-    double r = (dx * by - dy * bx) / det;
-    double s = (ax * dy - ay * dx) / det;
-    return !(r < 0 || r > 1 || s < 0 || s > 1);
+//https://stackoverflow.com/questions/14176776/find-out-if-2-lines-intersect
+bool hasIntersection(int aX, int aY, int bX, int bY, int cX, int cY, int dX, int dY) {
+    return (((cX - aX) * (bY - aY) - (cY - aY) * (bX - aX))
+            * ((dX - aX) * (bY - aY) - (dY - aY) * (bX - aX)) < 0)
+           &&
+           (((aX - cX) * (dY - cY) - (aY - cY) * (dX - cX))
+            * ((bX - cX) * (dY - cY) - (bY - cY) * (dX - cX)) < 0);
 }
 
 bool hasColinearPoints(const std::vector<int> &values) {
-    //check if co-linearity of 1,2,3 is same and 2,3,4. If either is true, return true.
-    int val = (values[1]) * (values[2] - values[0]) - (values[0]) * (values[3] - values[1]);
-    if (val == 0) {
-        return ((values[3] - values[1]) * (values[4] - values[2]) -
-                (values[2] - values[0]) * (values[5] - values[3])) == 0;
-    }
-    return false;
+//    bool situation1 = ;
+//    bool situation2 = (values[0] * (values[3] - values[5]) +
+//                       values[2] * (values[5] - values[1]) +
+//                       values[4] * (values[1] - values[3])) == 0;
+    return (0 * (0 - values[3]) + values[0] * (values[3] - 0) +values[2] * (0 - values[1])) == 0
+    || (values[0] * (values[3] - values[5]) + values[2] * (values[5] - values[1]) + values[4] * (values[1] - values[3])) == 0;
 }
 
 void validateData(const std::string &currLine) {
@@ -228,7 +222,8 @@ void validateData(const std::string &currLine) {
         exit(1);
     }
 
-    if (hasIntersection(values)) {
+    if (hasIntersection(0, 0, values[0], values[1], values[2], values[3], values[4], values[5]) ||
+        hasIntersection(0, 0, values[4], values[5], values[2], values[3], values[0], values[1])) {
         std::cout << "error 3" << std::endl;
         exit(1);
     }
@@ -260,7 +255,8 @@ void readFile(const std::string &fileName) {
 }
 
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     readFile(argv[1]);
+//    readFile("/Users/oliveryu/Documents/assignment4/assignment4/shapeInput.txt");
     return 0;
 }
