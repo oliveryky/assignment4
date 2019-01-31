@@ -5,3 +5,8 @@ rhombus
 trapezoid
 quadrilateral
 parallelogram
+rectangle
+square
+rhombus
+trapezoid
+kite
