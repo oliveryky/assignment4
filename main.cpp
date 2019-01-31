@@ -157,7 +157,6 @@ bool checkData(const std::vector<std::string> tempData) {
     for (std::string str: tempData) {
         for (char c: str) {
             if (c < '0' || c > '9') {
-//                std::cout << "bad char" << std::endl;
                 return false;
             }
         }
@@ -166,7 +165,6 @@ bool checkData(const std::vector<std::string> tempData) {
         //check if it is in range
         int currVal = stoi(str);
         if (currVal < 0 || currVal > 100) {
-//            std::cout << "bad val" << std::endl;
             return false;
         }
     }
@@ -216,7 +214,7 @@ bool hasColinearPoints(const std::vector<int> &values) {
     return false;
 }
 
-void compileData(const std::string &currLine) {
+void validateData(const std::string &currLine) {
     std::vector<std::string> tempData = toArray(currLine);
     if (!checkData(tempData)) {
         std::cout << "error 1" << std::endl;
@@ -255,20 +253,14 @@ void readFile(const std::string &fileName) {
         std::string currLine, delimiter = ",";
         int counter = 1;
         while (getline(file, currLine)) {
-            //split string
-            compileData(currLine);
+            //validates and prints appropriate response
+            validateData(currLine);
         }
     }
 }
 
-//TODO: input validation
-//when printing may indicate errors when printing
-/*
- * points overlapping
- */
+
 int main(int argc, char* argv[]) {
     readFile(argv[1]);
-//    readFile("/Users/oliveryu/Documents/assignment4/assignment4/shapeInput.txt");
-//    readFile("/Users/oliveryu/Documents/assignment4/assignment4/temp.txt");
     return 0;
 }
