@@ -262,8 +262,9 @@ void readFile(const std::string &fileName) {
 /*
  * points overlapping
  */
-int main() {
-    readFile("/Users/oliveryu/Documents/assignment4/assignment4/shapeInput.txt");
+int main(int argc, char* argv[]) {
+    readFile(argv[1]);
+//    readFile("/Users/oliveryu/Documents/assignment4/assignment4/shapeInput.txt");
 //    readFile("/Users/oliveryu/Documents/assignment4/assignment4/temp.txt");
     return 0;
 }
