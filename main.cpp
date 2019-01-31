@@ -216,27 +216,31 @@ bool hasColinearPoints(const std::vector<int> &values) {
     return false;
 }
 
-std::string compileShape(const std::string &currLine) {
+void compileData(const std::string &currLine) {
     std::vector<std::string> tempData = toArray(currLine);
     if (!checkData(tempData)) {
-        return "error 1";
+        std::cout << "error 1" << std::endl;
+        exit(1);
     }
 
     //given the data points are valid
     std::vector<int> values = split(currLine);
     if (!checkDupPoints(values)) {
-        return "error 2";
+        std::cout << "error 2" << std::endl;
+        exit(1);
     }
 
     if (hasIntersection(values)) {
-        return "error 3";
+        std::cout << "error 3" << std::endl;
+        exit(1);
     }
 
     if (hasColinearPoints(values)) {
-        return "error 4";
+        std::cout << "error 4" << std::endl;
+        exit(1);
     }
 
-    return parseShape(values);
+    std::cout << parseShape(values) << std::endl;
 }
 
 /**
@@ -252,7 +256,7 @@ void readFile(const std::string &fileName) {
         int counter = 1;
         while (getline(file, currLine)) {
             //split string
-            std::cout << compileShape(currLine) << std::endl;
+            compileData(currLine);
         }
     }
 }
