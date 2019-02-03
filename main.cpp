@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include <iostream>
 #include <vector>
 #include <sstream>
 #include <math.h>
+#include <regex>
 
 /**
  * takes in a csv string and returns a vector with the values
@@ -13,7 +13,7 @@
 std::vector<int> split(const std::string &currLine) {
     std::vector<int> ret;
     std::string value;
-    char split = ',';
+    char split = ' ';
     std::istringstream stream(currLine);
 
     while (getline(stream, value, split)) {
@@ -137,7 +137,7 @@ std::string parseShape(const std::vector<int> &values) {
 std::vector<std::string> toArray(const std::string &currLine) {
     std::vector<std::string> ret;
     std::string value;
-    char split = ',';
+    char split = ' ';
     std::istringstream stream(currLine);
 
     while (getline(stream, value, split)) {
@@ -191,7 +191,9 @@ bool checkDupPoints(const std::vector<int> &values) {
 }
 
 //https://stackoverflow.com/questions/14176776/find-out-if-2-lines-intersect
-bool hasIntersection(int aX, int aY, int bX, int bY, int cX, int cY, int dX, int dY) {
+bool
+hasIntersection(const int &aX, const int &aY, const int &bX, const int &bY, const int &cX, const int &cY, const int &dX,
+                const int &dY) {
     return (((cX - aX) * (bY - aY) - (cY - aY) * (bX - aX))
             * ((dX - aX) * (bY - aY) - (dY - aY) * (bX - aX)) < 0)
            &&
@@ -204,11 +206,15 @@ bool hasColinearPoints(const std::vector<int> &values) {
 //    bool situation2 = (values[0] * (values[3] - values[5]) +
 //                       values[2] * (values[5] - values[1]) +
 //                       values[4] * (values[1] - values[3])) == 0;
-    return (0 * (0 - values[3]) + values[0] * (values[3] - 0) +values[2] * (0 - values[1])) == 0
-    || (values[0] * (values[3] - values[5]) + values[2] * (values[5] - values[1]) + values[4] * (values[1] - values[3])) == 0;
+    return (0 * (0 - values[3]) + values[0] * (values[3] - 0) + values[2] * (0 - values[1])) == 0
+           || (values[0] * (values[3] - values[5]) + values[2] * (values[5] - values[1]) +
+               values[4] * (values[1] - values[3])) == 0;
 }
 
-void validateData(const std::string &currLine) {
+void validateData(std::string &currLine) {
+    std::regex reg("\\s+");
+    currLine = std::regex_replace(currLine, reg, " ");
+
     std::vector<std::string> tempData = toArray(currLine);
     if (!checkData(tempData)) {
         std::cout << "error 1" << std::endl;
@@ -245,7 +251,7 @@ void validateData(const std::string &currLine) {
 void readFile(const std::string &fileName) {
     std::ifstream file(fileName.c_str());
     if (file.is_open()) {
-        std::string currLine, delimiter = ",";
+        std::string currLine;
         int counter = 1;
         while (getline(file, currLine)) {
             //validates and prints appropriate response
@@ -258,5 +264,6 @@ void readFile(const std::string &fileName) {
 int main(int argc, char *argv[]) {
     readFile(argv[1]);
 //    readFile("/Users/oliveryu/Documents/assignment4/assignment4/shapeInput.txt");
+//    readFile("/Users/oliveryu/Documents/assignment4/assignment4/temp2.txt");
     return 0;
 }

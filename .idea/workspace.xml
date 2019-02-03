@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9babe3a1-87fa-4340-9c6d-965be8248f0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment4.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment4.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment4.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment4.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/assignment4" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assignment4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e1.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e1.profraw" afterDir="false" />
@@ -21,13 +22,28 @@
       <change beforePath="$PROJECT_DIR$/e2.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e2.profraw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2_1.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e2_1.profraw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e3.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e3.profraw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e3_1.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e3_1.profraw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e3_2.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e3_2.profraw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e4.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e4.profraw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e4_1.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/e4_1.profraw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error1_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error1_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error1_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error1_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error2_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error2_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error3_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error3_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error3_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error3_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/error4_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error4_1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.profdata" beforeDir="false" afterPath="$PROJECT_DIR$/main.profdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.profdata" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.profraw" beforeDir="false" afterPath="$PROJECT_DIR$/main.profraw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/profile.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shapeInput.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp2.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="245" column="41" lean-forward="true" selection-start-line="245" selection-start-column="41" selection-end-line="245" selection-end-column="41" />
+            <state relative-caret-position="145">
+              <caret line="257" column="35" selection-start-line="257" selection-start-column="35" selection-end-line="257" selection-end-column="35" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -54,23 +70,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/results.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp2.txt">
+        <entry file="file://$PROJECT_DIR$/shapeInput.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-column="11" />
@@ -79,55 +86,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/error4_1.txt">
+        <entry file="file://$PROJECT_DIR$/temp2.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+              <caret column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shapeTest.txt">
+        <entry file="file://$PROJECT_DIR$/profile.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="195">
+              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/profile.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="160" selection-start-line="17" selection-start-column="160" selection-end-line="17" selection-end-column="160" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/error3_1.txt">
+        <entry file="file://$PROJECT_DIR$/test.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/error3_2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/error3.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+              <caret selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -145,8 +125,11 @@
       <find>q1.y</find>
       <find>q2.x</find>
       <find>q2.y</find>
-      <find />
+      <find>,</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/resultFiles</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,22 +142,24 @@
         <option value="$PROJECT_DIR$/shapeTest.txt" />
         <option value="$PROJECT_DIR$/results.txt" />
         <option value="$PROJECT_DIR$/temp.txt" />
-        <option value="$PROJECT_DIR$/error1.txt" />
-        <option value="$PROJECT_DIR$/error2.txt" />
-        <option value="$PROJECT_DIR$/error4.txt" />
-        <option value="$PROJECT_DIR$/shapeInput.txt" />
-        <option value="$PROJECT_DIR$/error1_1.txt" />
-        <option value="$PROJECT_DIR$/error1_2.txt" />
-        <option value="$PROJECT_DIR$/error2_1.txt" />
         <option value="$PROJECT_DIR$/test.sh" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/fuzz.cpp" />
+        <option value="$PROJECT_DIR$/shapeInput.txt" />
+        <option value="$PROJECT_DIR$/profile.sh" />
+        <option value="$PROJECT_DIR$/error1.txt" />
+        <option value="$PROJECT_DIR$/error1_1.txt" />
+        <option value="$PROJECT_DIR$/error1_2.txt" />
+        <option value="$PROJECT_DIR$/error2.txt" />
+        <option value="$PROJECT_DIR$/error2_1.txt" />
         <option value="$PROJECT_DIR$/error3.txt" />
         <option value="$PROJECT_DIR$/error3_1.txt" />
         <option value="$PROJECT_DIR$/error3_2.txt" />
+        <option value="$PROJECT_DIR$/error4.txt" />
+        <option value="$PROJECT_DIR$/error4_1.txt" />
+        <option value="$PROJECT_DIR$/resultFiles/result7.txt" />
         <option value="$PROJECT_DIR$/temp2.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/error4_1.txt" />
-        <option value="$PROJECT_DIR$/profile.sh" />
       </list>
     </option>
   </component>
@@ -248,34 +233,34 @@
       <workItem from="1548527568575" duration="1288000" />
       <workItem from="1548629526719" duration="70000" />
       <workItem from="1548777770568" duration="14098000" />
-      <workItem from="1548948179413" duration="9355000" />
+      <workItem from="1548948179413" duration="12644000" />
+      <workItem from="1549060676847" duration="15432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29019000" />
+    <option name="totallyTimeSpent" value="47740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="765" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925706" visible="true" weight="0.26804122" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925706" visible="true" weight="0.27172312" />
       <window_info id="Structure" order="1" sideWeight="0.5007429" side_tool="true" weight="0.2533137" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="CPU Profiler" weight="0.32986626" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32986626" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32986626" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32986626" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32986626" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32986626" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32986626" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="bottom" id="CPU Profiler" order="13" weight="0.32986626" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -294,48 +279,10 @@
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error1_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error1_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error2_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -346,35 +293,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/error4.txt">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        <state relative-caret-position="-2090" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzz.h" />
+    <entry file="file://$PROJECT_DIR$/fuzz.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#46#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.sh">
+    <entry file="file://$PROJECT_DIR$/shapeTest.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shapeInput.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state>
+          <caret selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/error3.txt">
+    <entry file="file://$PROJECT_DIR$/results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/error3_1.txt">
+    <entry file="file://$PROJECT_DIR$/error1_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error1_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
@@ -388,55 +376,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shapeTest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="245" column="41" lean-forward="true" selection-start-line="245" selection-start-column="41" selection-end-line="245" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error4_1.txt">
+    <entry file="file://$PROJECT_DIR$/error3_1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/error3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error2_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error4_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result6.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result9.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test9.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/test10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultFiles/result10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="257" column="35" selection-start-line="257" selection-start-column="35" selection-end-line="257" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/profile.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="160" selection-start-line="17" selection-start-column="160" selection-end-line="17" selection-end-column="160" />
+        <state relative-caret-position="195">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="11" />
         </state>
       </provider>
     </entry>
