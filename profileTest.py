@@ -21,4 +21,4 @@ for file in os.listdir(directory):
     os.system("xcrun llvm-profdata merge -sparse ./profile/" + prev + ".profdata ./profile/" + fileName + ".profraw -o ./profile/" + fileName + ".profdata")
     prev = fileName
 
-os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata")
+os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata > coverage.txt")
