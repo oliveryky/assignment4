@@ -251,6 +251,7 @@ void validateData(std::string &currLine) {
 void readFile(const std::string &fileName) {
     std::ifstream file(fileName.c_str());
     if (file.is_open()) {
+        std::cout << fileName << std::endl;
         std::string currLine;
         int counter = 1;
         while (getline(file, currLine)) {
