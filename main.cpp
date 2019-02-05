@@ -216,7 +216,7 @@ bool hasColinearPoints(const std::vector<int> &values) {
             + values[4] * (0 - values[1])) == 0;
 }
 
-
+//trim from: https://stackoverflow.com/questions/25829143/trim-whitespace-from-a-string
 std::string &rtrim(std::string &str) {
     auto it1 = std::find_if(str.rbegin(), str.rend(),
                             [](char ch) { return !std::isspace<char>(ch, std::locale::classic()); });
@@ -224,7 +224,6 @@ std::string &rtrim(std::string &str) {
     return str;
 }
 
-//trim from: https://stackoverflow.com/questions/25829143/trim-whitespace-from-a-string
 std::string &ltrim(std::string &str) {
     auto it2 = std::find_if(str.begin(), str.end(),
                             [](char ch) { return !std::isspace<char>(ch, std::locale::classic()); });
@@ -284,7 +283,6 @@ void readFile(const std::string &fileName) {
     if (file.is_open()) {
 //        std::cout << fileName << std::endl;
         std::string currLine;
-        int counter = 1;
         while (getline(file, currLine)) {
             //validates and prints appropriate response
             validateData(currLine);
