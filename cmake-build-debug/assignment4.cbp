@@ -85,6 +85,9 @@
 		<Unit filename="/Users/oliveryu/Documents/assignment4/assignment4/main.cpp">
 			<Option target="assignment4"/>
 		</Unit>
+		<Unit filename="/Users/oliveryu/Documents/assignment4/assignment4/main.h">
+			<Option target="assignment4"/>
+		</Unit>
 		<Unit filename="/Users/oliveryu/Documents/assignment4/assignment4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
