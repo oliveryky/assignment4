@@ -155,7 +155,7 @@ bool checkData(const std::vector<std::string> tempData) {
 
     //for each string check if there are any invalid characters
     for (std::string str: tempData) {
-        if(str.empty()) {
+        if (str.empty()) {
             return false;
         }
         for (char c: str) {
@@ -211,12 +211,40 @@ bool hasColinearPoints(const std::vector<int> &values) {
 //                       values[4] * (values[1] - values[3])) == 0;
     return (0 * (0 - values[3]) + values[0] * (values[3] - 0) + values[2] * (0 - values[1])) == 0
            || (values[0] * (values[3] - values[5]) + values[2] * (values[5] - values[1]) +
-               values[4] * (values[1] - values[3])) == 0;
+               values[4] * (values[1] - values[3])) == 0 ||
+           (0 * (values[1] - values[5]) + values[0] * (values[5] - 0)
+            + values[4] * (0 - values[1])) == 0;
+}
+
+
+std::string &rtrim(std::string &str) {
+    auto it1 = std::find_if(str.rbegin(), str.rend(),
+                            [](char ch) { return !std::isspace<char>(ch, std::locale::classic()); });
+    str.erase(it1.base(), str.end());
+    return str;
+}
+
+//trim from: https://stackoverflow.com/questions/25829143/trim-whitespace-from-a-string
+std::string &ltrim(std::string &str) {
+    auto it2 = std::find_if(str.begin(), str.end(),
+                            [](char ch) { return !std::isspace<char>(ch, std::locale::classic()); });
+    str.erase(str.begin(), it2);
+    return str;
+}
+
+std::string &trim(std::string &str) {
+    return ltrim(rtrim(str));
 }
 
 void validateData(std::string &currLine) {
+    if (currLine.empty()) {
+        std::cout << "error 1" << std::endl;
+        exit(1);
+    }
+
     std::regex reg("\\s+");
     currLine = std::regex_replace(currLine, reg, " ");
+    currLine = trim(currLine);
 
     std::vector<std::string> tempData = toArray(currLine);
     if (!checkData(tempData)) {
@@ -263,8 +291,6 @@ void readFile(const std::string &fileName) {
         }
     }
 }
-//  ` p ` Z ^
-//98 0 70 70 0 0
 
 int main(int argc, char *argv[]) {
     readFile(argv[1]);
