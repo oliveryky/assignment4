@@ -2,3 +2,4 @@
 rm testFiles/*
 rm resultFiles/*
 rm profile/*
+rm output/*

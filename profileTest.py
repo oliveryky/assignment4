@@ -1,6 +1,7 @@
 import os
+import filecmp
 
-os.system("clang++ -c main.cpp")
+os.system("clang++ -c -std=c++11 main.cpp")
 os.system("clang++ -o main main.o")
 os.system("python3 fuzz.py")
 os.system("clang++ -std=c++11 -fprofile-instr-generate -fcoverage-mapping main.cpp -o main")
@@ -17,8 +18,11 @@ directory = os.fsencode("testFiles")
 
 for file in os.listdir(directory):
     fileName = os.path.splitext(os.fsdecode(file))[0]
-    os.system("LLVM_PROFILE_FILE=\"./profile/" + fileName + ".profraw\" ./main ./testFiles/" + fileName + ".txt")
+    os.system("LLVM_PROFILE_FILE=\"./profile/" + fileName + ".profraw\" ./main ./testFiles/" + fileName + ".txt > ./output/" + fileName + ".txt")
     os.system("xcrun llvm-profdata merge -sparse ./profile/" + prev + ".profdata ./profile/" + fileName + ".profraw -o ./profile/" + fileName + ".profdata")
     prev = fileName
+    if(not filecmp.cmp("./output/" + fileName + ".txt", "./resultFiles/" + fileName + ".txt")):
+        print(fileName)
 
+os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata")
 os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata > coverage.txt")

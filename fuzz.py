@@ -10,9 +10,8 @@ def writeFile(shape, docNum):
     toWrite = " ".join(map(str, coordinates));
     testFile.write(toWrite);
 
-    resultName = "result" + str(docNum) + ".txt";
-    resultFile = open(os.path.join("resultFiles", resultName), "x");
-    resultFile.write(next(iter(shape)));
+    resultFile = open(os.path.join("resultFiles", testName), "x");
+    resultFile.write(next(iter(shape)) + "\n");
 
 def expand(coordinates, ratio):
     ret = [];
@@ -115,7 +114,7 @@ def generateError1():
         for i in range(6):
             ret.append(random.randint(101, 2147483647));
     
-    return {"error1": ret};
+    return {"error 1": ret};
 
 
 def generateError2():
@@ -130,7 +129,7 @@ def generateError2():
         validShape[idx1 * 2] = 0;
         validShape[idx1 * 2 + 1] = 0;
 
-    return {"error2": validShape};
+    return {"error 2": validShape};
 
 
 def generateError3():
@@ -149,7 +148,7 @@ def generateError3():
         validShape[2], validShape[4] = validShape[4], validShape[2];
         validShape[3], validShape[5] = validShape[5], validShape[3];
 
-    return {"error3": validShape};
+    return {"error 3": validShape};
 
 def generateError4():
     idx = random.randint(0, 1);
@@ -173,7 +172,7 @@ def generateError4():
     if(x2 == x1):
         validShape[4] = x2;
         validShape[5] = random.randint(x2 + 1, 100);
-        return {"error4": validShape};
+        return {"error 4": validShape};
     
     slope = (y2 - y1)/(x2 - x1);
     yIntercept = y1 - slope * x1;
@@ -220,7 +219,7 @@ def generateInvalidShape():
     return invalidOptions[error]();
 
 def makeTestFile():
-    for i in range(1000):
+    for i in range(10):
         curr = random.randint(1, 2);
         if(curr == 1):
             writeFile(generateValidShape(), i + 1);

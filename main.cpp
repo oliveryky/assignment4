@@ -155,6 +155,9 @@ bool checkData(const std::vector<std::string> tempData) {
 
     //for each string check if there are any invalid characters
     for (std::string str: tempData) {
+        if(str.empty()) {
+            return false;
+        }
         for (char c: str) {
             if (c < '0' || c > '9') {
                 return false;
@@ -251,7 +254,7 @@ void validateData(std::string &currLine) {
 void readFile(const std::string &fileName) {
     std::ifstream file(fileName.c_str());
     if (file.is_open()) {
-        std::cout << fileName << std::endl;
+//        std::cout << fileName << std::endl;
         std::string currLine;
         int counter = 1;
         while (getline(file, currLine)) {
@@ -260,7 +263,8 @@ void readFile(const std::string &fileName) {
         }
     }
 }
-
+//  ` p ` Z ^
+//98 0 70 70 0 0
 
 int main(int argc, char *argv[]) {
     readFile(argv[1]);
