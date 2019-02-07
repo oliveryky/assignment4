@@ -1,6 +1,5 @@
 import random
 import os
-import sys
 
 def writeFile(shape, docNum):
     coordinates = next(iter(shape.values()));
@@ -219,7 +218,7 @@ def generateInvalidShape():
     return invalidOptions[error]();
 
 def makeTestFile():
-    for i in range(1000):
+    for i in range(10):
         curr = random.randint(1, 2);
         if(curr == 1):
             writeFile(generateValidShape(), i + 1);
