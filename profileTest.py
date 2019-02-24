@@ -13,8 +13,8 @@ os.system("rm -f *.profdata")
 # os.system("rm profile/*")
 os.system("touch ./profile/main.profdata")
 os.system("touch ./default.profraw")
-os.system("rm ./profile/.DS_Store.profraw")
-os.system("rm ./profile/.DS_Store.profdata")
+# os.system("rm ./profile/.DS_Store.profraw")
+# os.system("rm ./profile/.DS_Store.profdata")
 prev = "main"
 os.system("LLVM_PROFILE_FILE=\"./profile/" + prev + ".profraw\" ./main")
 directory = os.fsencode("testFiles")
@@ -27,5 +27,6 @@ for file in os.listdir(directory):
     if(not filecmp.cmp("./output/" + fileName + ".txt", "./resultFiles/" + fileName + ".txt")):
         print(fileName)
 
-# os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata")
-os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata > coverage.txt")
+os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata")
+# os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata > coverage.txt")
+os.system("All Tests Passed")
