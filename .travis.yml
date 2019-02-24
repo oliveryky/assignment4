@@ -1,4 +1,0 @@
-os: osx
-language: cpp
-compiler: clang++
-script: python3 profileTest.py
