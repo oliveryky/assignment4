@@ -27,6 +27,6 @@ for file in os.listdir(directory):
     if(not filecmp.cmp("./output/" + fileName + ".txt", "./resultFiles/" + fileName + ".txt")):
         print(fileName)
 
-os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata")
-# os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata > coverage.txt")
-os.system("All Tests Passed")
+# os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata")
+os.system("xcrun llvm-cov show ./main -instr-profile=./profile/" + prev + ".profdata > coverage.txt")
+os.system("echo All Tests Passed")
