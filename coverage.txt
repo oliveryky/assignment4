@@ -10,18 +10,18 @@
    10|       | * @param currLine
    11|       | * @return vector containing the coordinates of the shape in form of (x1,y1,x2,y2,x3,y3)
    12|       | */
-   13|    869|std::vector<int> split(const std::string &currLine) {
-   14|    869|    std::vector<int> ret;
-   15|    869|    std::string value;
-   16|    869|    char split = ' ';
-   17|    869|    std::istringstream stream(currLine);
-   18|    869|
-   19|  6.08k|    while (getline(stream, value, split)) {
-   20|  5.21k|        ret.push_back(stoi(value));
-   21|  5.21k|    }
-   22|    869|
-   23|    869|    return ret;
-   24|    869|}
+   13|    889|std::vector<int> split(const std::string &currLine) {
+   14|    889|    std::vector<int> ret;
+   15|    889|    std::string value;
+   16|    889|    char split = ' ';
+   17|    889|    std::istringstream stream(currLine);
+   18|    889|
+   19|  6.22k|    while (getline(stream, value, split)) {
+   20|  5.33k|        ret.push_back(stoi(value));
+   21|  5.33k|    }
+   22|    889|
+   23|    889|    return ret;
+   24|    889|}
    25|       |
    26|       |/**
    27|       | * returns distance between two points
@@ -31,9 +31,9 @@
    31|       | * @param y2
    32|       | * @return distance between points (x1,y1) and (x2,y2)
    33|       | */
-   34|  3.49k|double getDistance(const int &x1, const int &y1, const int &x2, const int &y2) {
-   35|  3.49k|    return sqrt(pow((double) (x2 - x1), 2) + pow((double) (y2 - y1), 2));
-   36|  3.49k|}
+   34|  3.41k|double getDistance(const int &x1, const int &y1, const int &x2, const int &y2) {
+   35|  3.41k|    return sqrt(pow((double) (x2 - x1), 2) + pow((double) (y2 - y1), 2));
+   36|  3.41k|}
    37|       |
    38|       |/**
    39|       | * returns the slope between (x1,y1) and (x2,y2)
@@ -43,234 +43,234 @@
    43|       | * @param y2
    44|       | * @return the slope, returns infinity if line is vertical
    45|       | */
-   46|    892|double getSlope(const int &x1, const int &y1, const int &x2, const int &y2) {
-   47|    892|    //check for vertical slope
-   48|    892|    return (x2 - x1) == 0 ? std::numeric_limits<double>::infinity() : (y2 - y1) / (double) (x2 - x1);
-   49|    892|}
+   46|    924|double getSlope(const int &x1, const int &y1, const int &x2, const int &y2) {
+   47|    924|    //check for vertical slope
+   48|    924|    return (x2 - x1) == 0 ? std::numeric_limits<double>::infinity() : (y2 - y1) / (double) (x2 - x1);
+   49|    924|}
    50|       |
    51|       |/**
    52|       | * checks if the shape is a parallelogram
    53|       | * @param values
    54|       | * @return
    55|       | */
-   56|    531|bool isParallelogram(const std::vector<int> &values) {
-   57|    531|    return getDistance(0, 0, values[4], values[5]) == getDistance(values[0], values[1], values[2], values[3])
-   58|    531|           && getDistance(0, 0, values[0], values[1]) == getDistance(values[4], values[5], values[2], values[3]);
-   59|    531|}
+   56|    524|bool isParallelogram(const std::vector<int> &values) {
+   57|    524|    return getDistance(0, 0, values[4], values[5]) == getDistance(values[0], values[1], values[2], values[3])
+   58|    524|           && getDistance(0, 0, values[0], values[1]) == getDistance(values[4], values[5], values[2], values[3]);
+   59|    524|}
    60|       |
    61|       |/**
    62|       | * checks if the shape is a trapezoid
    63|       | * @param values
    64|       | * @return
    65|       | */
-   66|    223|bool isTrapezoid(const std::vector<int> &values) {
-   67|    223|    return getSlope(0, 0, values[4], values[5]) == getSlope(values[0], values[1], values[2], values[3])
-   68|    223|           || getSlope(0, 0, values[0], values[1]) == getSlope(values[4], values[5], values[2], values[3]);
-   69|    223|}
+   66|    231|bool isTrapezoid(const std::vector<int> &values) {
+   67|    231|    return getSlope(0, 0, values[4], values[5]) == getSlope(values[0], values[1], values[2], values[3])
+   68|    231|           || getSlope(0, 0, values[0], values[1]) == getSlope(values[4], values[5], values[2], values[3]);
+   69|    231|}
    70|       |
    71|       |/**
    72|       | * checks if shape is a kite
    73|       | * @param values
    74|       | * @return
    75|       | */
-   76|    145|bool isKite(const std::vector<int> &values) {
-   77|    145|    return getDistance(0, 0, values[4], values[5]) == getDistance(0, 0, values[0], values[1])
-   78|    145|           && getDistance(values[0], values[1], values[2], values[3]) ==
-   79|     68|              getDistance(values[4], values[5], values[2], values[3]);
-   80|    145|}
+   76|    158|bool isKite(const std::vector<int> &values) {
+   77|    158|    return getDistance(0, 0, values[4], values[5]) == getDistance(0, 0, values[0], values[1])
+   78|    158|           && getDistance(values[0], values[1], values[2], values[3]) ==
+   79|     72|              getDistance(values[4], values[5], values[2], values[3]);
+   80|    158|}
    81|       |
    82|       |/**
    83|       | * checks if shape is rhombus
    84|       | * @param values
    85|       | * @return
    86|       | */
-   87|    308|bool isRhombus(const std::vector<int> &values) {
-   88|    308|    double a = getDistance(0, 0, values[0], values[1]);
-   89|    308|    double b = getDistance(values[0], values[1], values[2], values[3]);
-   90|    308|    double c = getDistance(values[4], values[5], values[2], values[3]);
-   91|    308|    double d = getDistance(0, 0, values[4], values[5]);
-   92|    308|    bool ret = a == b && b == c && c == d && d == a;
-   93|    308|
-   94|    308|    return ret;
-   95|    308|}
+   87|    293|bool isRhombus(const std::vector<int> &values) {
+   88|    293|    double a = getDistance(0, 0, values[0], values[1]);
+   89|    293|    double b = getDistance(values[0], values[1], values[2], values[3]);
+   90|    293|    double c = getDistance(values[4], values[5], values[2], values[3]);
+   91|    293|    double d = getDistance(0, 0, values[4], values[5]);
+   92|    293|    bool ret = a == b && b == c && c == d && d == a;
+   93|    293|
+   94|    293|    return ret;
+   95|    293|}
    96|       |
    97|       |/**
    98|       | * checks if shape is rectangle
    99|       | * @param values
   100|       | * @return
   101|       | */
-  102|    308|bool isRectangle(const std::vector<int> &values) {
-  103|    308|    return values[1] == 0 && values[0] == values[2] && values[3] == values[5] && values[4] == 0;
-  104|    308|}
+  102|    293|bool isRectangle(const std::vector<int> &values) {
+  103|    293|    return values[1] == 0 && values[0] == values[2] && values[3] == values[5] && values[4] == 0;
+  104|    293|}
   105|       |
   106|       |/**
   107|       | * takes a vector of x,y-coordinates and returns the most specific shape
   108|       | * @param values
   109|       | * @return the string name for the shape
   110|       | */
-  111|    531|std::string parseShape(const std::vector<int> &values) {
-  112|    531|    //check for parallelogram, trapzezoid or kite
-  113|    531|    if (isParallelogram(values)) {
-  114|    308|        bool checkRhombus = isRhombus(values);
-  115|    308|        bool checkRectangle = isRectangle(values);
-  116|    308|
-  117|    308|        if (!checkRhombus && !checkRectangle) {
-  118|     77|            return "parallelogram";
-  119|    231|        } else if (checkRhombus) {
-  120|    155|            if (checkRectangle) {
-  121|     81|                return "square";
-  122|     81|            } else {
-  123|     74|                return "rhombus";
-  124|     74|            }
-  125|     76|        } else {
-  126|     76|            return "rectangle";
-  127|     76|        }
-  128|    223|    } else if (isTrapezoid(values)) {
-  129|     78|        return "trapezoid";
-  130|    145|    } else if (isKite(values)) {
-  131|     68|        return "kite";
-  132|     77|    } else {
-  133|     77|        return "quadrilateral";
-  134|     77|    }
-  135|    531|}
+  111|    524|std::string parseShape(const std::vector<int> &values) {
+  112|    524|    //check for parallelogram, trapzezoid or kite
+  113|    524|    if (isParallelogram(values)) {
+  114|    293|        bool checkRhombus = isRhombus(values);
+  115|    293|        bool checkRectangle = isRectangle(values);
+  116|    293|
+  117|    293|        if (!checkRhombus && !checkRectangle) {
+  118|     64|            return "parallelogram";
+  119|    229|        } else if (checkRhombus) {
+  120|    152|            if (checkRectangle) {
+  121|     82|                return "square";
+  122|     82|            } else {
+  123|     70|                return "rhombus";
+  124|     70|            }
+  125|     77|        } else {
+  126|     77|            return "rectangle";
+  127|     77|        }
+  128|    231|    } else if (isTrapezoid(values)) {
+  129|     73|        return "trapezoid";
+  130|    158|    } else if (isKite(values)) {
+  131|     72|        return "kite";
+  132|     86|    } else {
+  133|     86|        return "quadrilateral";
+  134|     86|    }
+  135|    524|}
   136|       |
-  137|    999|std::vector<std::string> toArray(const std::string &currLine) {
-  138|    999|    std::vector<std::string> ret;
-  139|    999|    std::string value;
-  140|    999|    char split = ' ';
-  141|    999|    std::istringstream stream(currLine);
-  142|    999|
-  143|  10.8k|    while (getline(stream, value, split)) {
-  144|  9.83k|        ret.push_back(value);
-  145|  9.83k|    }
-  146|    999|
-  147|    999|    return ret;
-  148|    999|}
+  137|  1.00k|std::vector<std::string> toArray(const std::string &currLine) {
+  138|  1.00k|    std::vector<std::string> ret;
+  139|  1.00k|    std::string value;
+  140|  1.00k|    char split = ' ';
+  141|  1.00k|    std::istringstream stream(currLine);
+  142|  1.00k|
+  143|  11.1k|    while (getline(stream, value, split)) {
+  144|  10.1k|        ret.push_back(value);
+  145|  10.1k|    }
+  146|  1.00k|
+  147|  1.00k|    return ret;
+  148|  1.00k|}
   149|       |
-  150|    999|bool checkData(const std::vector<std::string> tempData) {
-  151|    999|    //if there's less than 6 points
-  152|    999|    if (tempData.size() != 6) {
-  153|     70|        return false;
-  154|     70|    }
-  155|    929|
-  156|    929|    //for each string check if there are any invalid characters
-  157|  5.27k|    for (std::string str: tempData) {
-  158|  5.27k|        if (str.empty()) {
+  150|  1.00k|bool checkData(const std::vector<std::string> tempData) {
+  151|  1.00k|    //if there's less than 6 points
+  152|  1.00k|    if (tempData.size() != 6) {
+  153|     63|        return false;
+  154|     63|    }
+  155|    937|
+  156|    937|    //for each string check if there are any invalid characters
+  157|  5.39k|    for (std::string str: tempData) {
+  158|  5.39k|        if (str.empty()) {
   159|      0|            return false;
   160|      0|        }
-  161|  9.17k|        for (char c: str) {
-  162|  9.17k|            if (c < '0' || c > '9') {
+  161|  9.35k|        for (char c: str) {
+  162|  9.35k|            if (c < '0' || c > '9') {
   163|     24|                return false;
   164|     24|            }
-  165|  9.17k|        }
-  166|  5.27k|
-  167|  5.27k|        //if this point is reached then that means the current value is a valid number
-  168|  5.27k|        //check if it is in range
-  169|  5.27k|        int currVal = stoi(str);
-  170|  5.25k|        if (currVal < 0 || currVal > 100) {
-  171|     36|            return false;
-  172|     36|        }
-  173|  5.25k|    }
-  174|    929|
-  175|    929|    return true;
-  176|    929|}
+  165|  9.35k|        }
+  166|  5.39k|
+  167|  5.39k|        //if this point is reached then that means the current value is a valid number
+  168|  5.39k|        //check if it is in range
+  169|  5.39k|        int currVal = stoi(str);
+  170|  5.36k|        if (currVal < 0 || currVal > 100) {
+  171|     24|            return false;
+  172|     24|        }
+  173|  5.36k|    }
+  174|    937|
+  175|    937|    return true;
+  176|    937|}
   177|       |
-  178|    869|bool checkDupPoints(const std::vector<int> &values) {
-  179|  3.25k|    for (int i = 0; i < 6; i += 2) {
-  180|  2.48k|        int x = values[i];
-  181|  2.48k|        int y = values[i + 1];
-  182|  2.48k|        if (x == 0 && y == 0) {
-  183|     48|            return false;
-  184|     48|        }
-  185|  2.43k|
-  186|  4.89k|        for (int j = i + 2; j < 6; j += 2) {
-  187|  2.50k|            if ((x == values[j] && y == values[j + 1])) {
-  188|     49|                return false;
-  189|     49|            }
-  190|  2.50k|        }
-  191|  2.43k|    }
-  192|    869|
-  193|    869|    return true;
-  194|    869|}
+  178|    889|bool checkDupPoints(const std::vector<int> &values) {
+  179|  3.28k|    for (int i = 0; i < 6; i += 2) {
+  180|  2.51k|        int x = values[i];
+  181|  2.51k|        int y = values[i + 1];
+  182|  2.51k|        if (x == 0 && y == 0) {
+  183|     50|            return false;
+  184|     50|        }
+  185|  2.46k|
+  186|  4.93k|        for (int j = i + 2; j < 6; j += 2) {
+  187|  2.53k|            if ((x == values[j] && y == values[j + 1])) {
+  188|     64|                return false;
+  189|     64|            }
+  190|  2.53k|        }
+  191|  2.46k|    }
+  192|    889|
+  193|    889|    return true;
+  194|    889|}
   195|       |
   196|       |//https://stackoverflow.com/questions/14176776/find-out-if-2-lines-intersect
   197|       |bool
   198|       |hasIntersection(const int &aX, const int &aY, const int &bX, const int &bY, const int &cX, const int &cY, const int &dX,
-  199|  1.51k|                const int &dY) {
-  200|  1.51k|    return (((cX - aX) * (bY - aY) - (cY - aY) * (bX - aX))
-  201|  1.51k|            * ((dX - aX) * (bY - aY) - (dY - aY) * (bX - aX)) < 0)
-  202|  1.51k|           &&
-  203|  1.51k|           (((aX - cX) * (dY - cY) - (aY - cY) * (dX - cX))
-  204|    168|            * ((bX - cX) * (dY - cY) - (bY - cY) * (dX - cX)) < 0);
-  205|  1.51k|}
+  199|  1.52k|                const int &dY) {
+  200|  1.52k|    return (((cX - aX) * (bY - aY) - (cY - aY) * (bX - aX))
+  201|  1.52k|            * ((dX - aX) * (bY - aY) - (dY - aY) * (bX - aX)) < 0)
+  202|  1.52k|           &&
+  203|  1.52k|           (((aX - cX) * (dY - cY) - (aY - cY) * (dX - cX))
+  204|    172|            * ((bX - cX) * (dY - cY) - (bY - cY) * (dX - cX)) < 0);
+  205|  1.52k|}
   206|       |
-  207|    654|bool hasColinearPoints(const std::vector<int> &values) {
-  208|    654|//    bool situation1 = ;
-  209|    654|//    bool situation2 = (values[0] * (values[3] - values[5]) +
-  210|    654|//                       values[2] * (values[5] - values[1]) +
-  211|    654|//                       values[4] * (values[1] - values[3])) == 0;
-  212|    654|    return (0 * (0 - values[3]) + values[0] * (values[3] - 0) + values[2] * (0 - values[1])) == 0
-  213|    654|           || (values[0] * (values[3] - values[5]) + values[2] * (values[5] - values[1]) +
-  214|    592|               values[4] * (values[1] - values[3])) == 0 ||
-  215|    654|           (0 * (values[1] - values[5]) + values[0] * (values[5] - 0)
-  216|    534|            + values[4] * (0 - values[1])) == 0;
-  217|    654|}
+  207|    668|bool hasColinearPoints(const std::vector<int> &values) {
+  208|    668|//    bool situation1 = ;
+  209|    668|//    bool situation2 = (values[0] * (values[3] - values[5]) +
+  210|    668|//                       values[2] * (values[5] - values[1]) +
+  211|    668|//                       values[4] * (values[1] - values[3])) == 0;
+  212|    668|    return (0 * (0 - values[3]) + values[0] * (values[3] - 0) + values[2] * (0 - values[1])) == 0
+  213|    668|           || (values[0] * (values[3] - values[5]) + values[2] * (values[5] - values[1]) +
+  214|    596|               values[4] * (values[1] - values[3])) == 0 ||
+  215|    668|           (0 * (values[1] - values[5]) + values[0] * (values[5] - 0)
+  216|    529|            + values[4] * (0 - values[1])) == 0;
+  217|    668|}
   218|       |
   219|       |//trim from: https://stackoverflow.com/questions/25829143/trim-whitespace-from-a-string
-  220|    999|std::string &rtrim(std::string &str) {
-  221|    999|    auto it1 = std::find_if(str.rbegin(), str.rend(),
+  220|  1.00k|std::string &rtrim(std::string &str) {
+  221|  1.00k|    auto it1 = std::find_if(str.rbegin(), str.rend(),
   222|  1.00k|                            [](char ch) { return !std::isspace<char>(ch, std::locale::classic()); });
-  223|    999|    str.erase(it1.base(), str.end());
-  224|    999|    return str;
-  225|    999|}
+  223|  1.00k|    str.erase(it1.base(), str.end());
+  224|  1.00k|    return str;
+  225|  1.00k|}
   226|       |
-  227|    999|std::string &ltrim(std::string &str) {
-  228|    999|    auto it2 = std::find_if(str.begin(), str.end(),
+  227|  1.00k|std::string &ltrim(std::string &str) {
+  228|  1.00k|    auto it2 = std::find_if(str.begin(), str.end(),
   229|  1.00k|                            [](char ch) { return !std::isspace<char>(ch, std::locale::classic()); });
-  230|    999|    str.erase(str.begin(), it2);
-  231|    999|    return str;
-  232|    999|}
+  230|  1.00k|    str.erase(str.begin(), it2);
+  231|  1.00k|    return str;
+  232|  1.00k|}
   233|       |
-  234|    999|std::string &trim(std::string &str) {
-  235|    999|    return ltrim(rtrim(str));
-  236|    999|}
+  234|  1.00k|std::string &trim(std::string &str) {
+  235|  1.00k|    return ltrim(rtrim(str));
+  236|  1.00k|}
   237|       |
   238|  1.00k|void validateData(std::string &currLine) {
   239|  1.00k|    if (currLine.empty()) {
-  240|      1|        std::cout << "error 1" << std::endl;
-  241|      1|        exit(1);
-  242|      1|    }
-  243|    999|
-  244|    999|    std::regex reg("\\s+");
-  245|    999|    currLine = std::regex_replace(currLine, reg, " ");
-  246|    999|    currLine = trim(currLine);
-  247|    999|
-  248|    999|    std::vector<std::string> tempData = toArray(currLine);
-  249|    999|    if (!checkData(tempData)) {
-  250|    130|        std::cout << "error 1" << std::endl;
-  251|    130|        exit(1);
-  252|    130|    }
-  253|    869|
-  254|    869|    //given the data points are valid
-  255|    869|    std::vector<int> values = split(currLine);
-  256|    869|    if (!checkDupPoints(values)) {
-  257|     97|        std::cout << "error 2" << std::endl;
-  258|     97|        exit(1);
-  259|     97|    }
-  260|    772|
-  261|    772|    if (hasIntersection(0, 0, values[0], values[1], values[2], values[3], values[4], values[5]) ||
-  262|    772|        hasIntersection(0, 0, values[4], values[5], values[2], values[3], values[0], values[1])) {
-  263|    118|        std::cout << "error 3" << std::endl;
-  264|    118|        exit(1);
-  265|    118|    }
-  266|    654|
-  267|    654|    if (hasColinearPoints(values)) {
-  268|    123|        std::cout << "error 4" << std::endl;
-  269|    123|        exit(1);
-  270|    123|    }
-  271|    531|
-  272|    531|    std::cout << parseShape(values) << std::endl;
-  273|    531|}
+  240|      0|        std::cout << "error 1" << std::endl;
+  241|      0|        exit(1);
+  242|      0|    }
+  243|  1.00k|
+  244|  1.00k|    std::regex reg("\\s+");
+  245|  1.00k|    currLine = std::regex_replace(currLine, reg, " ");
+  246|  1.00k|    currLine = trim(currLine);
+  247|  1.00k|
+  248|  1.00k|    std::vector<std::string> tempData = toArray(currLine);
+  249|  1.00k|    if (!checkData(tempData)) {
+  250|    111|        std::cout << "error 1" << std::endl;
+  251|    111|        exit(1);
+  252|    111|    }
+  253|    889|
+  254|    889|    //given the data points are valid
+  255|    889|    std::vector<int> values = split(currLine);
+  256|    889|    if (!checkDupPoints(values)) {
+  257|    114|        std::cout << "error 2" << std::endl;
+  258|    114|        exit(1);
+  259|    114|    }
+  260|    775|
+  261|    775|    if (hasIntersection(0, 0, values[0], values[1], values[2], values[3], values[4], values[5]) ||
+  262|    775|        hasIntersection(0, 0, values[4], values[5], values[2], values[3], values[0], values[1])) {
+  263|    107|        std::cout << "error 3" << std::endl;
+  264|    107|        exit(1);
+  265|    107|    }
+  266|    668|
+  267|    668|    if (hasColinearPoints(values)) {
+  268|    144|        std::cout << "error 4" << std::endl;
+  269|    144|        exit(1);
+  270|    144|    }
+  271|    524|
+  272|    524|    std::cout << parseShape(values) << std::endl;
+  273|    524|}
   274|       |
   275|       |/**
   276|       | * attempts to open and read the specified file
