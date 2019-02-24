@@ -9,6 +9,8 @@ os.system("clang++ -std=c++11 -fprofile-instr-generate -fcoverage-mapping main.c
 os.system("rm -f *.profdata")
 os.system("rm resultFiles/*")
 os.system("rm testFiles/*")
+os.system("rm output/*")
+os.system("rm profile/*")
 os.system("touch ./profile/main.profdata")
 os.system("touch ./default.profraw")
 os.system("rm ./profile/.DS_Store.profraw")
